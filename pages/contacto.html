@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/main.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
+        <title>Contacto</title>
+    </head>
+<body>
+    <div class="rPadre">
+        <header>
+            <nav id="navegacion">
+                <a href="../index.html"><h1>TopApps Review</h1></a>
+                <!--Submenu para vista mobile-->
+                <div class="controlMenu">
+                    <a href="#navegacion" class="open">Menu</a>
+                    <a href="#" class="close">Cerrar</a>
+                </div>                    
+                <ul class="navItems">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="top10.html">Top 10</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="sobreNosotros.html">Sobre Nosotros</a></li>
+                </ul>                  
+                <!--menu para vista desktop-->
+                <ul id="menuComun">
+                    <li>
+                        <a href="../index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="reviews.html">Reviews</a>
+                    </li>
+                    <li>
+                        <a href="top10.html">Top 10</a>
+                    </li>
+                    <li>
+                        <a href="contacto.html">Contacto</a>
+                    </li>
+                    <li>
+                        <a href="sobreNosotros.html">Sobre Nosotros</a>
+                    </li>
+                        <!--
+                        <form action="" method="post" target="_blank">                            
+                            <input type="search" name="busqueda" placeholder="buscar...">                
+                            <input type="submit" value="Busqueda">       
+                        </form>
+                        -->
+                </ul>            
+            </nav>        
+        </header>
+        <section class="sContacto">
+            <form action="" id="formContacto">
+                <fieldset>
+                    <legend>
+                        Envianos tu consulta
+                    </legend>
+                    <div>
+                        <label for="nombre">Tu nombre</label>
+                        <input type="text" name="nombre" placeholder="nombre">
+                    </div>
+                    <div>
+                        <label for="mail">
+                            E-mail
+                        </label>
+                        <input type="email" name="mail" placeholder="ejemplo@mail.com">
+                    </div>
+                    <div class="pais">
+                        <label for="pais">País</label>
+                        <select name="pais" id="">
+                            <option value="argentina">argentina</option>
+                            <option value="uruguay">uruguay</option>
+                            <option value="brasil">brasil</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="valoracion">Valora el contenido de nuestra pagina</label>
+                        <div>
+                            <input type="radio" name="valoracion" value="excelente">Excelente
+                            <input type="radio" name="valoracion" value="bueno">Bueno
+                            <input type="radio" name="valoracion" value="malo">Malo
+                        </div>
+
+                    </div>
+                    <div>
+                        <label for="comentario">Comentario</label>
+                        <div><textarea name="comentario" id="coment" cols="50" rows="10">Escribe tu comentario</textarea></div>
+                    </div>
+                    <div>
+                        <label for="chbox"><input type="checkbox" id="chbox">Deseas suscribir tu mail para recibir noticias</label>
+                        
+                    </div>
+                    <div>
+                        <input type="submit" value="Enviar">
+                        <input type="reset" value="Cancelar">
+                    </div>
+                
+                </fieldset>
+            </form>
+        </section>
+        <aside class="cPubli">
+            <p>publicidad</p>                
+        </aside>       
+        <footer class="cFooter">              
+            <ul>Siguenos en:
+                <li>
+                    <a href="https://www.twitter.com" target="_blank">Twiter</a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com" target="_blank">Facebook</a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com" target="_blank">Youtube</a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+                </li>       
+            </ul>
+            <div class="webMaster">
+                    <h4>Todos los derechos reservados - Developed by <a href="mailto:arix.xn@gmail.com" target="_blank">Arix</a></h4>
+            </div>  
+        </footer>
+    </div>
+</body>
+</html>
