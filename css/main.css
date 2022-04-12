@@ -58,11 +58,20 @@ ul.navItems{
 #navegacion:target .close{
     display: block;
 }
+/*Animacion menu mobile*/
 #navegacion:target .navItems{
     background: rgb(112, 214, 86) none repeat scroll 0 0;
     height: 7rem;
-    transition: heigth 0.4s ease-in-out 0s, background-color 0.9s ease 0s;
+    transition: heigth 0.4s ease-in-out 0s, background-color 1s ease 0s;
 }
+
+.navItems{
+    clear:both;
+    height: 0;
+    overflow: 0;
+    transition: height 0.4s ease-in-out 0s, background-color 2s ease 0s;
+}
+/*Fin animacion menu mobile*/
 main{
     grid-area: main;    
     padding: 0.4rem;
@@ -118,11 +127,18 @@ footer ul li a{
 }
 
 .return{
-    margin: 10px;
-    padding: 20px;
+    margin-top: 2rem;
+    padding: 1rem;    
     text-align: center;
 
 }
+.return a{
+    border-radius: 0.3rem;
+    background-color: rgb(112, 214, 86);
+    padding: 0.5rem;        
+    color: white;
+}
+
 
 h1{
     text-transform: uppercase;
@@ -200,12 +216,20 @@ iframe{
     #menuComun li{
         list-style: none;
         margin: 0.5rem;
+        border-radius: 0.3rem;
+        padding: 0.2rem;
     }
     #menuComun li a {
         color: white;
         text-decoration: none;       
         
     }
+    #menuComun li:hover{
+        background-color: rgb(34, 119, 59);
+        transform: scale(1.2);
+
+    }
+    
     
     aside{  
         grid-area: aside;      
@@ -220,11 +244,23 @@ iframe{
     footer{
         margin-top: 0rem;
     }
+    footer ul li:hover{
+        transform: scale(1.2);
+    }
     h1{
         font-size: 2rem;
+        
+    }
+    h1:hover{
+        transform: scale(1.1);
+        
     }
     h2{
         font-size: 1.5rem;
+    }
+
+    .return:hover{
+        transform: scale(1.1);
     }
     
     /*queri Review*/
