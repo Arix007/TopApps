@@ -25,7 +25,8 @@ header{
     position: sticky;
     top: 0;
     z-index: 1;
-    height: 4.8rem;
+    height: 7rem;
+    margin-bottom: 1rem;
     
     
 }
@@ -167,6 +168,21 @@ img{
 iframe{
     width: 75%;
 }
+.color-nav{
+    background: rgb(112, 214, 86);
+    height: 2rem;
+    margin: 0.3rem;   
+}
+.navbar-nav{
+    background: rgb(112, 214, 86);
+}
+span{
+    margin-top: 0.5rem;
+    
+}
+ul li{
+    margin-top: 0.5rem;
+}
 
 /*Media queries*/
 @media only screen and (min-width:768px) {
@@ -262,8 +278,10 @@ iframe{
     .return:hover{
         transform: scale(1.1);
     }
-    
-    /*queri Review*/
+    ul li{
+        margin-top: 0.2rem;
+    }
+    /*Review*/
     .rPadre{    
         display: grid;
         grid-template-columns: 2fr 0.5fr;
@@ -281,10 +299,25 @@ iframe{
         margin: 1rem;
     }
     
-     /*queri de TOP10*/
+     /*TOP10*/
      .top{
         height: 95rem;
     }
+    /*Bootstrap */
+    
+    .nav-link{
+        color: white;
+    }
+    .bi-facebook , .bi-youtube , .bi-instagram , .bi-twitter{
+        font-size: 30px;
+    }
+    .centrado-text{
+        align-items: center;
+        display: flex;  
+        justify-content: center;
+    
+    }
+    
 
 }
 
@@ -339,6 +372,7 @@ textarea{
 }
 
 /*pagina sobre nosotros */
+
 .team{
     margin: 5rem;
     padding: 20px;
@@ -357,3 +391,4 @@ textarea{
 .team p{
     padding: 10px;
 }
+
