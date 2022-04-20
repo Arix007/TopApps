@@ -1,3 +1,4 @@
+/*Vista Mobile*/
 *{
     margin: 0;
     padding: 0;
@@ -49,6 +50,10 @@ ul.navItems{
 .navItems a , .controlMenu a{
     color: white;
     margin-left: 0.5rem;
+    
+}
+.controlMenu{
+    margin-top: 2rem;
 }
 .close{
     display: none;
@@ -62,7 +67,7 @@ ul.navItems{
 /*Animacion menu mobile*/
 #navegacion:target .navItems{
     background: rgb(112, 214, 86) none repeat scroll 0 0;
-    height: 7rem;
+    height: 10rem;
     transition: heigth 0.4s ease-in-out 0s, background-color 1s ease 0s;
 }
 
@@ -103,7 +108,9 @@ section article p{
     margin-bottom: 20px;
 }
 
-
+aside{
+    display: none;
+}
 
 footer{
     grid-area: footer;
@@ -184,7 +191,84 @@ ul li{
     margin-top: 0.5rem;
 }
 
-/*Media queries*/
+/*pagina top10*/
+.top{
+    margin: 20px;
+}
+.top h2{
+    margin-bottom: 10px;
+}
+.top p{
+    margin-top: 10px;
+}
+
+/* pagina contacto */
+#formContacto{   
+    margin: 1rem;
+    padding: 10px;
+    width: 400px;
+    height: 300px;   
+        
+    
+}
+.sContacto{
+    display: flex;  
+    justify-content: center;
+    height: 35rem;
+    margin-top: 4rem;
+    
+}
+.cFooter{
+    height: 8rem;
+}
+.cPubli{
+    height: 35rem;
+    margin-top: 4rem;
+}
+#formContacto fieldset{
+    border: 0;
+}
+input{
+    border-radius: 5px;
+    margin: 5px;
+}
+.pais{
+    margin: 5px;  
+}
+
+textarea{
+    border-radius: 7px;
+    margin: 5px;
+}
+legend{
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+/*pagina sobre nosotros */
+
+.team{
+    margin: 5rem;
+    padding: 20px;
+    width: 400px;
+    height: 25rem;
+    border: 1px solid darkgrey;
+    background-color: rgb(252, 243, 215);
+    border-radius: 20px;
+    text-align: center;
+    top: 10px;
+    left: 30%;
+}
+.team img{
+    padding: 20px;
+}
+.team p{
+    padding: 10px;
+}
+
+
+/*Vista Desktop*/
 @media only screen and (min-width:768px) {
 
     *{
@@ -244,18 +328,16 @@ ul li{
         background-color: rgb(34, 119, 59);
         transform: scale(1.2);
 
-    }
-    
-    
+    }        
     aside{  
+        display: block;
         grid-area: aside;      
         background: rgb(225, 238, 168);    
         margin: 1rem;        
         border: 1px solid darkgrey;
         border-radius: 20px;
         text-align: center;
-        height: 70rem;
-        
+        height: 70rem;        
     }
     footer{
         margin-top: 0rem;
@@ -290,9 +372,7 @@ ul li{
                             "section aside"
                             "footer footer";
         row-gap: 1rem;
-    }
- 
-    
+    }    
 
     .sReview{
         height: 91rem;
@@ -301,7 +381,7 @@ ul li{
     
      /*TOP10*/
      .top{
-        height: 95rem;
+        height: 60rem;
     }
     /*Bootstrap */
     
@@ -316,79 +396,7 @@ ul li{
         display: flex;  
         justify-content: center;
     
-    }
-    
-
+    }   
 }
 
-
-
-/*pagina top10*/
-.top{
-    margin: 20px;
-}
-.top h2{
-    margin-bottom: 10px;
-}
-.top p{
-    margin-top: 10px;
-}
-
-/* pagina contacto */
-#formContacto{
-    margin: 1rem;
-    padding: 10px;
-    width: 400px;
-    height: 300px;   
-        
-    
-}
-.sContacto{
-    height: 35rem;
-    margin-top: 4rem;
-    
-}
-.cFooter{
-    height: 8rem;
-}
-.cPubli{
-    height: 35rem;
-    margin-top: 4rem;
-}
-#formContacto fieldset{
-    border: 0;
-}
-input{
-    border-radius: 5px;
-    margin: 5px;
-}
-.pais{
-    margin: 5px;  
-}
-
-textarea{
-    border-radius: 7px;
-    margin: 5px;
-}
-
-/*pagina sobre nosotros */
-
-.team{
-    margin: 5rem;
-    padding: 20px;
-    width: 400px;
-    height: 25rem;
-    border: 1px solid darkgrey;
-    background-color: rgb(252, 243, 215);
-    border-radius: 20px;
-    text-align: center;
-    top: 10px;
-    left: 30%;
-}
-.team img{
-    padding: 20px;
-}
-.team p{
-    padding: 10px;
-}
 
