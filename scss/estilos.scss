@@ -1,0 +1,332 @@
+@import "utilities/variables";
+@import "layout/contacto";
+@import "layout/top10";
+
+//Vista Mobile
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.cPadre{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 7% 6% 80% 7%;
+    grid-template-areas: "header "
+                        "main"
+                        "section"
+                        "footer";
+    
+    row-gap: 1rem;
+}
+
+header{
+    grid-area: header;
+    background-color: rgb(112, 214, 86);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    height: 7rem;
+    margin-bottom: 1rem;
+    
+    
+}
+#menuComun{
+    display: none;
+    
+}
+ul.navItems{
+    height: 0;
+    overflow: hidden;
+    
+}
+#navegacion{
+    &:target .navItems{
+    height: 60rem;
+    padding: 1rem;
+    list-style: none;
+    }
+    &:target .open{
+        display: none;
+        }
+    &:target .close{
+        display: block;
+    }    
+}
+.navItems a , .controlMenu a{
+    color: white;
+    margin-left: 0.5rem;
+    
+}
+.controlMenu{
+    margin-top: 2rem;
+}
+.close{
+    display: none;
+}
+
+//Animacion menu mobile//
+#navegacion{
+    &:target .navItems{
+    background: $color-bar none repeat scroll 0 0;
+    height: 7.2rem;
+    transition: heigth 0.4s ease-in-out 0s, background-color 1s ease 0s;
+    }
+}
+
+.navItems{
+    clear:both;
+    height: 0;
+    overflow: 0;
+    transition: height 0.4s ease-in-out 0s, background-color 2s ease 0s;
+}
+//Fin animacion menu mobile//
+main{
+    grid-area: main;    
+    padding: 0.4rem;
+    border-radius: 2rem;
+    border: 1px solid darkgrey;
+    background-color: rgb(174, 174, 252);
+    height: 5rem;
+    p{
+        margin-top: 0.5rem;
+        padding: 0.3rem;
+        text-align: justify;
+    }   
+    
+}
+
+section{
+    margin: 0.5rem;
+    grid-area: section;
+    padding: 10px;   
+    background-color: rgb(252, 243, 215);
+    border: 1px solid darkgrey;
+    border-radius: 2rem;
+    article p{
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }    
+}
+
+
+aside{
+    display: none;
+}
+
+footer{
+    grid-area: footer;
+    background-color: black;
+    color: white;
+    ul{
+        display: flex;
+        text-decoration: none;
+        margin: 5px;
+        list-style: none;
+        li{
+            margin-top: 0.5rem;
+            a{
+                color: white;    
+                margin: 0.5rem;
+            }    
+        }
+        
+    }
+    
+}
+
+.webMaster{
+    text-align: center;
+    margin: 20px 10px 20px 20px;
+}
+
+.return{
+    margin-top: 2rem;
+    padding: 1rem;    
+    text-align: center;
+    a{
+        border-radius: 0.3rem;
+        background-color: $color-bar;
+        padding: 0.5rem;        
+        color: white;
+    }
+
+}
+
+h1{
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0px;
+    padding: 10px;
+    color: white;
+    font-size: 1.5rem;
+}
+
+h2{ 
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    margin-top: 25px;
+    margin-bottom: 1rem;
+}
+
+a{
+    text-decoration: none;
+}
+img{
+    display: block;
+    margin: auto;
+    width: 45%;
+}
+iframe{
+    width: 75%;
+}
+.color-nav{
+    background: $color-bar;
+    height: 2rem;
+    margin: 0.3rem;   
+}
+.navbar-nav{
+    background: $color-bar;
+}
+span{
+    margin-top: 0.5rem;
+    
+}
+
+//Vista Desktop
+@media only screen and (min-width:768px) {
+
+    *{
+        font-size: 1rem;
+    }
+    .cPadre{
+        display: grid;
+        grid-template-columns: 2fr 0.5fr;
+        grid-template-rows: 7% 8% 80% 7%;
+        grid-template-areas: "header header"
+                            "main aside "
+                            "section aside"
+                            "footer footer ";
+        
+    }
+   
+    header{
+        height: 7rem;
+        
+    }
+    main{
+        margin: 1rem;
+        height: auto;
+    }
+    section{
+        margin: 1rem;
+    }
+      
+    .controlMenu{
+        display: none;
+    }
+    #menuDesp{
+        display: none;
+    }
+    .navItems{
+        display: none;
+    }
+    #menuComun{
+        display: flex;
+        padding: 5px;
+        margin: 10px;
+        text-transform: uppercase;
+        li{
+            list-style: none;
+            margin: 0.5rem;
+            border-radius: 0.3rem;
+            padding: 0.2rem;
+            a {
+                color: white;
+                text-decoration: none;           
+            }
+            &:hover{
+                background-color: rgb(34, 119, 59);
+                transform: scale(1.2);
+
+            }
+        }
+    }
+    
+    
+    aside{  
+        display: block;
+        grid-area: aside;      
+        background: rgb(225, 238, 168);    
+        margin: 1rem;        
+        border: 1px solid darkgrey;
+        border-radius: 20px;
+        text-align: center;
+        height: 70rem;        
+    }
+    footer{
+        margin-top: 0rem;
+        ul li:hover{
+            transform: scale(1.2);
+        }
+    }
+    
+    h1{
+        font-size: 2rem;
+        &:hover{
+            transform: scale(1.1);            
+        }
+        
+    }
+    
+    h2{
+        font-size: 1.5rem;
+    }
+
+    .return{
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+    
+    //Review
+    .rPadre{    
+        display: grid;
+        grid-template-columns: 2fr 0.5fr;
+        grid-template-rows: 6% 87% 7%;
+        grid-template-areas: "header header" 
+                            "section aside"
+                            "footer footer";
+        row-gap: 1rem;
+    }    
+
+    .sReview{
+        height: 91rem;
+        margin: 1rem;
+    }
+    
+    //TOP10
+    .top{
+        height: 60rem;
+    }
+
+    //Bootstrap en Sobre Nosotros    
+    .nav-link{
+        color: white;
+    }
+    .bi-facebook , .bi-youtube , .bi-instagram , .bi-twitter{
+        font-size: 30px;
+    }
+    .centrado-text{
+        align-items: center;
+        display: flex;  
+        justify-content: center;
+    
+    }   
+}
+
+
