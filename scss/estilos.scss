@@ -8,6 +8,13 @@
     align-items: center;
     justify-items: center;
 }
+@mixin discus{
+    margin: 1rem;
+    border: 1px solid darkgray;
+    border-radius: 2rem;
+    padding: 0.7rem; 
+    background-color: rgb(252, 243, 215);
+}
 //extend
 %borde {
     border: 1px solid darkgray;
@@ -123,7 +130,7 @@ section{
 
 
 aside{
-    display: none;
+    @include mostrar;
 }
 
 footer{
@@ -188,7 +195,7 @@ a{
     display: block;
     margin: auto;
     padding: 1rem;
-    width: 65%;
+    width: $size-photos/1.5;
 }
 img{
     display: block;
@@ -196,7 +203,7 @@ img{
 }
 iframe{
     display: block;
-    width: 85%;
+    width: $size-photos*0.75;
 }
 .color-nav{
     background: $color-bar;
@@ -213,10 +220,53 @@ span{
 .fa-twitter , .fa-facebook , .fa-youtube , .fa-instagram{
     font-size: 25px;
 }
+#disqus_thread{
+    @include discus;
+}
 
-//Vista Desktop
+//Vista Tablet
+
 @media only screen and (min-width:768px) {
 
+    $seteo:false;
+
+    .controlMenu{
+        display: none;
+    }
+    #menuDesp{
+        display: none;
+    }
+    .navItems{
+        display: none;
+    }
+    #menuComun{
+        display: flex;
+        padding: 5px;
+        margin: 10px;
+        text-transform: uppercase;
+        li{
+            list-style: none;
+            margin: 0.5rem;
+            border-radius: 0.3rem;
+            padding: 0.2rem;
+            a {
+                color: white;
+                text-decoration: none;           
+            }
+            &:hover{
+                background-color: rgb(34, 119, 59);
+                transform: scale(1.2);
+
+            }
+        }
+    }    
+}
+//Vista Desktop
+
+
+@media only screen and (min-width:1024px) {
+
+    
     *{
         font-size: 1rem;
     }
@@ -338,7 +388,7 @@ span{
     
     //TOP10
     .top{
-        height: 80rem;
+        height: 75rem;
     }
 
     //Bootstrap en Sobre Nosotros    
@@ -352,6 +402,10 @@ span{
         @include flex;
     
     }   
+
 }
+
+
+
 
 

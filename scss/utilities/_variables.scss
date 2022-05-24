@@ -6,3 +6,13 @@ $estilos:(
     alineado: justify,
     margen:0.5rem,
 );
+$size-photos:100%;
+
+$seteo:true;
+@mixin mostrar {
+    @if $seteo{
+       display: none;
+    }@else{
+        display: block;
+    }
+}
